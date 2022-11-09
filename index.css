@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 50%;
+    font-family:  'poppins',serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+}
+h1{
+    position: relative;
+    font-size: 5rem;
+    color: rgb(0, 0, 0);
+}
+h1::before{
+    content:attr(text);
+    position: absolute;
+    color: #ea80b0;
+    width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    filter: drop-shadow(0 0 20px #ea80b0) drop-shadow(0 0 40px #ea80b0);
+    border-right: 3px solid #ea80b0;
+    animation:animate 3s linear infinite;
+}
+@keyframes animate {
+    0%,100%{
+        width: 0;
+    }
+    60%,80%{
+        width: 100%;
+    }
+}
